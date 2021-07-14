@@ -12,6 +12,8 @@ HARP is a smart contract based crypto which uses BEP-20 interface, making it sec
 
 More than 84% of HARP is either burnt or reserved for public liquidity. AND LP is locked FOREVER! Please check the transaction event of locking LP [here on bscscan](https://bscscan.com/tx/0x7d56b419a16464bce56184aab105ac46a0eee456217e969274a4b27b720a9250#eventlog) and [here](https://bit.ly/3ediyKa)
 
+https://bscheck.eu/0xe37ab1f60987cb4ac3c27918c11412f41460ab0b
+
 ## Community Driven
 
 Community driven & fair launch. The dev team burned all of their tokens and participated with everyone else.
