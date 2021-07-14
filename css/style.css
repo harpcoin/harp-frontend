@@ -9024,3 +9024,7 @@ h1 span {
 [data-animate].animated {
   visibility: visible
 }
+
+.svg-logo {
+  width: 32px;
+}
