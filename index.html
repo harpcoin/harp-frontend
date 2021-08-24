@@ -48,7 +48,7 @@
    
    <script>
 		function init(){
-			info();
+			setTimeout(info,1000); 
 			setInterval(info,15000); 
 		}
 		
@@ -56,8 +56,11 @@
 			$.ajax({
 				type:"GET", 
 				url: "https://api.harpcoin.co:8443/harp", 
-				success: function(data) {
-					$("#price").html(data.price);
+				success: function(data) {				
+					$("#price").html(accounting.formatMoney(data.price, "$", 15));
+					$("#holders").html(accounting.formatNumber(data.holderCount));
+					$("#supply").html(accounting.formatNumber(data.circulatingSupply));
+					$("#mcap").html(accounting.formatMoney(data.marketCap));
 				}
 			});
 		}
@@ -980,6 +983,7 @@ big-word'>Q.</span>What is the HARP token contract address?</h3>
    <script src="js/matrial.js"></script>
    <script src="js/scripts.js"></script>
    <script src="js/custom.js"></script>
+   <script src="js/accounting.min.js"></script>
 </body>
 
 </html>
