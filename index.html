@@ -45,9 +45,26 @@
       gtag('js', new Date());
       gtag('config', 'G-WF1HFXW4FT');
    </script>
+   
+   <script>
+		function init(){
+			info();
+			setInterval(info,15000); 
+		}
+		
+		function info(){
+			$.ajax({
+				type:"GET", 
+				url: "https://api.harpcoin.co:8443/harp", 
+				success: function(data) {
+					$("#price").html(data.price);
+				}
+			});
+		}
+   </script>
 </head>
 
-<body class="home1-vs1-bg">
+<body class="home1-vs1-bg" onload="init(); return false;">
    <div class="preLoader">
       <div class="preload-img"> <img src="img/favicon.png" alt="" class="pre-img"> </div>
    </div>
@@ -139,6 +156,29 @@
             </div>
          </div>
       </section>  
+
+      <section class="pt-60 pb-30 crypto-patern">
+         <div class="container">
+			<div class="d-flex text-lg-center flex-column flex-lg-row header-stats">
+				<div class="flex-fill w-100 py-3">
+					<p class="mb-0 h3 text-white" id="price"><img src="img/loading.svg"></img></p>
+					<p class="mb-0 text-light small">Current Price</p>
+				</div>
+				<div class="flex-fill w-100 py-3">
+					<p class="mb-0 h3 text-white" id="holders"><img src="img/loading.svg"></img></p>
+					<p class="mb-0 text-light small">Holders</p>
+				</div>
+				<div class="flex-fill w-100 py-3">
+					<p class="mb-0 h3 text-white" id="supply"><img src="img/loading.svg"></img></p>
+					<p class="mb-0 text-light small">Supply</p>
+				</div>
+				<div class="flex-fill w-100 py-3">
+					<p class="mb-0 h3 text-white" id="mcap"><img src="img/loading.svg"></img></p>
+					<p class="mb-0 text-light small">Market Cap</p>
+				</div>
+			</div>
+		</div>
+	  </section>	
 
       <section class="pt-60 pb-30 crypto-patern">
          <div class="container">
